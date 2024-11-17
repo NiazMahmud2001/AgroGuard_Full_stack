@@ -1,0 +1,113 @@
+create database if not exists agroguard;
+use agroguard;
+
+create table if not exists userReg(
+    #personId int not null auto_increment,
+    userName varchar(20) not null,
+    userPass varchar(10) not null, 
+    droneId varchar(20) not null,
+    unique(userName),
+    primary key(droneId)
+);
+
+create table if not exists deliveryAgent(
+	personName varchar(50) not null , 
+    agentId varchar(20) not null, 
+    agentEmail varchar(30) not null, 
+    agentPhone bigint(13) not null,
+    agentArea varchar(10) not null,
+    primary key(agentId)
+);
+
+
+create table if not exists preOrder_info(
+    cusName varchar(50) not null, 
+    deliveryAddress varchar(100) not null, 
+   	cusEID varchar(20) not null, 
+    deliveryLon double(24,20) not null,
+    deliveryLat double(24,20) not null,
+    desireModel varchar(10) not null, 
+    deliverystate varchar(10) not null,
+    estDeliveryDate bigint(35) not null,
+    agentID varchar(20) not null,
+    primary key(cusEID)
+);
+
+create table droneIDS(
+	modelName varchar(30) not null, 
+    id varchar(15) not null, 
+   	primary key(id),
+    unique(id)
+);
+
+create table droneServices(
+    droneId varchar(15) not null,
+    serviceLink varchar(200) not null , 
+    serviceName varchar(20) not null, 
+    primary key(droneId,serviceName)
+);
+
+
+
+use agroguard;
+insert into deliveryagent VALUES("Ahmad" , "6RT3V" , "ahmad@gmail.com", "971521809001", "Abu-Dhabi");
+insert into deliveryagent VALUES("Kassam" , "POwD67" , "kassam@gmail.com", "971521809003", "Dubai");
+insert into deliveryagent VALUES("Noor" , "kjr9IO" , "noor@gmail.com", "971521809773", "Sharjah");
+insert into deliveryagent VALUES("Hosain" , "QP84gT" , "hosain@gmail.com", "971521809023", "Ajamn");
+insert into deliveryagent VALUES("Ali" , "u9RPON" , "ali@gmail.com", "971521809423", "RAK");
+
+
+INSERT INTO droneIDS VALUES('AgriDrone X1', 'droneid1');
+INSERT INTO droneIDS VALUES('CropSpray 300', 'droneid2');
+INSERT INTO droneIDS VALUES('FieldScan Pro', 'droneid3');
+INSERT INTO droneIDS VALUES('SoilSense A1', 'droneid4');
+INSERT INTO droneIDS VALUES('YieldMax Z10', 'droneid5');
+INSERT INTO droneIDS VALUES('FarmAssist 100', 'droneid6');
+INSERT INTO droneIDS VALUES('AgriSurveyor V2', 'droneid7');
+INSERT INTO droneIDS VALUES('SprayBot M5', 'droneid8');
+INSERT INTO droneIDS VALUES('AquaDrone T9', 'droneid9');
+INSERT INTO droneIDS VALUES('PestControl X', 'droneid');
+
+
+
+INSERT INTO droneservices VALUES
+('droneid1', 'https://github.com/', 'camera_feature'),
+('droneid1', 'https://github.com/', 'focusing_feature'),
+('droneid1', 'https://github.com/', 'landing_feature'),
+('droneid1', 'https://github.com/', 'navigation_feature'),
+('droneid2', 'https://github.com/', 'camera_feature'),
+('droneid2', 'https://github.com/', 'battery_management'),
+('droneid2', 'https://github.com/', 'collision_avoidance'),
+('droneid2', 'https://github.com/', 'altitude_control'),
+('droneid3', 'https://github.com/', 'thermal_camera'),
+('droneid3', 'https://github.com/', 'focusing_feature'),
+('droneid3', 'https://github.com/', 'gps_tracking'),
+('droneid3', 'https://github.com/', 'return_to_home'),
+('droneid4', 'https://github.com/', 'camera_feature'),
+('droneid4', 'https://github.com/', 'object_detection'),
+('droneid4', 'https://github.com/', 'focusing_feature'),
+('droneid4', 'https://github.com/', 'landing_assistance'),
+('droneid5', 'https://github.com/', 'emergency_landing'),
+('droneid5', 'https://github.com/', 'path_planning'),
+('droneid5', 'https://github.com/', 'signal_boosting'),
+('droneid5', 'https://github.com/', 'geofencing'),
+('droneid6', 'https://github.com/', 'weather_monitoring'),
+('droneid6', 'https://github.com/', 'thermal_camera'),
+('droneid6', 'https://github.com/', 'navigation_feature'),
+('droneid6', 'https://github.com/', 'gps_tracking'),
+('droneid7', 'https://github.com/', 'camera_feature'),
+('droneid7', 'https://github.com/', 'battery_management'),
+('droneid7', 'https://github.com/', 'collision_avoidance'),
+('droneid7', 'https://github.com/', 'landing_feature'),
+('droneid8', 'https://github.com/', 'focusing_feature'),
+('droneid8', 'https://github.com/', 'thermal_camera'),
+('droneid8', 'https://github.com/', 'return_to_home'),
+('droneid8', 'https://github.com/', 'signal_boosting'),
+('droneid9', 'https://github.com/', 'object_detection'),
+('droneid9', 'https://github.com/', 'battery_management'),
+('droneid9', 'https://github.com/', 'collision_avoidance'),
+('droneid9', 'https://github.com/', 'emergency_landing'),
+('droneid10', 'https://github.com/', 'camera_feature'),
+('droneid10', 'https://github.com/', 'geofencing'),
+('droneid10', 'https://github.com/', 'path_planning'),
+('droneid10', 'https://github.com/', 'altitude_control');

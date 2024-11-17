@@ -1,0 +1,406 @@
+/* font-family: 'Signika Negative', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Freehand&display=swap");
+/* font-family: 'Freehand', cursive; */
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+/* font-family: 'Raleway', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+/* font-family: 'Playfair Display', serif; */
+@import url("https://fonts.googleapis.com/css2?family=Fasthand&display=swap");
+/* font-family: 'Fasthand', cursive; */
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+/* font-family: 'Quicksand', sans-serif; */
+/* up==>> light font */
+@import url("https://fonts.googleapis.com/css2?family=Tajawal&display=swap");
+/* font-family: 'Tajawal', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+/* font-family: 'Dancing Script', cursive; */
+@import url("https://fonts.googleapis.com/css2?family=Agdasima&display=swap");
+/* font-family: 'Agdasima', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+/* font-family: 'Open Sans', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+/* font-family: 'Montserrat', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Tektur&display=swap");
+/* font-family: 'Tektur', cursive; */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Tektur", "cursive";
+  background-color: transparent;
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-color: rgba(0, 0, 0, 1);
+  overflow: hidden;
+}
+.menubar {
+  position: absolute;
+  width: 100vw;
+  height: 90px;
+  z-index: 10000000;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+.menubar > .logo {
+  width: 300px;
+  height: 100%;
+  background-color: transparent;
+  position: relative;
+}
+.menubar > .logo > .mother_logo {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.menubar > .other_button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: transparent;
+  height: 100%;
+  width: 50vw;
+  color: white;
+}
+
+.menubar > .other_button > div {
+  background-color: transparent;
+  position: relative;
+  font-size: 15px;
+  background-color: transparent;
+  width: 101px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  transition: background-color 0.5s 0s ease-in-out, color 0.5s 0s ease-in-out;
+}
+
+.menubar > .other_button > div > a {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  width: 101px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  transition: background-color 0.5s 0s ease-in-out, color 0.5s 0s ease-in-out;
+}
+.menubar > .other_button > div:hover a {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  transition: background-color 0.5s 0s ease-in-out, color 0.5s 0s ease-in-out;
+}
+.logout_btn{
+  cursor: pointer;
+  text-decoration: none;
+  background-color: white;
+  color: black;
+  font-size: 15px;
+  width: 101px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+}
+/* ================================================================================================= */
+@media screen and (max-width: 550px) {
+  .menubar {
+    height: 80px;
+  }
+  .menubar > .logo {
+    width: 30vw;
+  }
+  .menubar > .other_button {
+    width: 70vw;
+  }
+  .menubar > .other_button > div > a {
+    font-size: 13px;
+  }
+}
+
+/* .menubar > .other_button > div::after {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #fafafa;
+  transform-origin: bottom center;
+  transition: transform 0.25s ease-out;
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  -o-transform: scaleX(0);
+}
+.menubar > .other_button > div:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom center;
+} */
+
+#c {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.rest_cont {
+  position: absolute;
+  width: 100vw;
+  height: calc(100vh - 90px);
+  z-index: 10000000000;
+  color: white;
+  background-color: transparent;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.form_cont {
+  position: relative;
+  width: 100vw;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+
+.form_cont > .form_mother {
+  position: absolute;
+  width: 80vw;
+  height: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 5px 45px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.274);
+  backdrop-filter: blur(0px);
+  border-radius: 10px;
+  overflow: hidden;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.form_cont > .form_mother > div {
+  position: relative;
+  width: 49.8%;
+  height: 80%;
+  background-color: transparent;
+}
+
+
+/* ======== right log-in-part ========= */
+.form_cont > .form_mother > .left_part{
+  border-right: 1px solid white;
+}
+
+/* ======== left register-part ========== */
+.user_pass , .user_name{
+    padding-left: 10px;
+}
+
+/* form right/left side */
+.form_cont > .form_mother > .right_part,
+.form_cont > .form_mother > .left_part {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; 
+  flex-direction: column;
+  width: 49.8%;
+  height: 90%;
+  background-color: transparent;
+  margin-left: 6px;
+}
+.form_cont > .form_mother > .right_part > .form_butt {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.form_cont > .form_mother > .right_part > .form_butt > div{
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border-bottom: 0.5px solid #fff;
+  font-size: 15px;
+  color: white;
+  font-family: "Tektur", "cursive";
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.form_cont > .form_mother > .right_part>.dataInfo{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 3px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  background-color: transparent;
+}
+.servicesOptions{
+  font-family: "Tektur", "cursive";
+  position: relative;
+  border: 0px;
+  color: white;
+  font-size: 15px;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.servicesOptions::after{
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 7%;
+  background-color: #fff;
+  transform: scaleX(0);
+  transform-origin: center center;
+  transition: transform 0.5s 0s;
+
+}
+.servicesOptions:hover::after {
+  transform: scaleX(1);
+  transition: transform 1s 0s;
+}
+
+/* icon design */
+
+/* === icon start === */
+.icon_container_mother {
+  position: relative;
+  width: 100vw;
+  height: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+
+.icon_container {
+  position: relative;
+  width: 60vw;
+  height: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: #03e9f4; */
+}
+
+.ico_fav {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.3em;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 5px 45px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2px);
+  overflow: hidden;
+}
+.ico_fav > svg {
+  width: 20px;
+  height: 20px;
+}
+
+.ico_fav:hover {
+  animation: ico_anim 0.8s 0s ease-in-out 1 forwards;
+  -webkit-animation: ico_anim 0.8s 0s ease-in-out 1 forwards;
+}
+
+@keyframes ico_anim {
+  0% {
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.ico_fav::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: skewX(45deg) translateX(150px);
+  transition: 1.4s;
+  -webkit-transition: 1.4s;
+  -moz-transition: 1.4s;
+  -ms-transition: 1.4s;
+  -o-transition: 1.4s;
+}
+
+.ico_fav:hover::before {
+  transform: skewX(45deg) translateX(-150px);
+  transition: 1.4s;
+  -webkit-transition: 1.4s;
+  -moz-transition: 1.4s;
+  -ms-transition: 1.4s;
+  -o-transition: 1.4s;
+}
+
+@media screen and (max-width: 550px) {
+  .ico_fav {
+    width: 30px;
+    height: 30px;
+  }
+  .ico_fav > svg {
+    width: 15px;
+    height: 15px;
+  }
+}
